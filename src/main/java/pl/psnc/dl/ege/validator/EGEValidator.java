@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.jdom.JDOMException;
+import org.jdom2.JDOMException;
 import org.xml.sax.SAXParseException;
 
 import pl.psnc.dl.ege.component.Validator;
