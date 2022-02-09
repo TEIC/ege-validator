@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.psnc.dl.ege.validator</groupId>
   <artifactId>ege-validator</artifactId>
-  <version>0.4-SNAPSHOT</version>
+  <version>0.4</version>
   <name>EGE Validator</name>
   <properties>
 
@@ -163,7 +163,7 @@
     <dependency>
       <groupId>pl.psnc.dl.ege</groupId>
       <artifactId>ege-framework</artifactId>
-      <version>0.4</version>
+      <version>0.5</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
