@@ -30,7 +30,7 @@ import pl.psnc.dl.ege.validator.StandardErrorHandler;
 public class SchemaValidator implements XmlValidator
 {
 	
-	private static final Logger LOGGER = Logger.getLogger(SchemaValidator.class);
+	private static final Logger LOGGER = LogManager.getLogger(SchemaValidator.class);
 	
 	private final String schemeUrl;
 	

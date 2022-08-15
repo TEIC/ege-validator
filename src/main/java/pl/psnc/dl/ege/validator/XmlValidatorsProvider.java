@@ -46,7 +46,7 @@ public class XmlValidatorsProvider extends DefaultHandler {
 
 	private static final String EAD_ID = "ege_ead";
 
-	private static final Logger logger = Logger
+	private static final Logger logger = LogManager
 			.getLogger(XmlValidatorsProvider.class);
 
 	/*

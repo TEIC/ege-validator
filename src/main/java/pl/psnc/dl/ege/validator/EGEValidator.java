@@ -28,7 +28,7 @@ public class EGEValidator
 	implements Validator
 {
 	
-	private static final Logger LOGGER = Logger.getLogger(EGEValidator.class);
+	private static final Logger LOGGER = LogManager.getLogger(EGEValidator.class);
 	
 	private static final XmlValidatorsProvider provider = XmlValidatorsProvider
 			.getInstance();

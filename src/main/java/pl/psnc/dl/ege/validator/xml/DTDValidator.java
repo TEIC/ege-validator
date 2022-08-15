@@ -39,7 +39,7 @@ public class DTDValidator
 	implements XmlValidator
 {
 
-	private static final Logger LOGGER = Logger.getLogger(DTDValidator.class);
+	private static final Logger LOGGER = LogManager.getLogger(DTDValidator.class);
 
 	/*
 	 * DTD declaration systemId 
