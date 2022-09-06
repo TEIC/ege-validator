@@ -43,12 +43,14 @@ public class EGEValidator
 	public ValidationResult validate(InputStream inputData,
 			DataType inputDataType)
 		throws IOException, ValidatorException, EGEException
-	{	
+	{
+		LOGGER.debug("starting to validate");
 		checkIfSupported(inputDataType);
 		XmlValidator validator = (XmlValidator)provider.getValidator(inputDataType);
 		try {
 			StandardErrorHandler seh = new StandardErrorHandler();
 			validator.validateXml(inputData,seh);
+			LOGGER.info("Validation status is " + seh.getValidationResult().getStatus());
 			return seh.getValidationResult();
 		}
 		catch (SAXParseException ex) {

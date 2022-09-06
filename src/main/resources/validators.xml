@@ -9,4 +9,7 @@
 	<validator format="EAD" mimeType="text/xml">
 		<dtd systemId="ege_ead" root="ead" />
 	</validator>
+	<validator format="TEI" mimeType="text/xml">
+		<rng url="https://www.tei-c.org/Vault/P5/4.4.0/xml/tei/odd/p5odds.rng" />
+	</validator>
 </validators>
