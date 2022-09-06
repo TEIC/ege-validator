@@ -18,7 +18,7 @@ import pl.psnc.dl.ege.types.DataType;
 import pl.psnc.dl.ege.validator.xml.DTDValidator;
 import pl.psnc.dl.ege.validator.xml.SchemaValidator;
 import pl.psnc.dl.ege.validator.xml.XmlValidator;
-
+import pl.psnc.dl.ege.validator.xml.RNGValidator;
 /**
  * Singleton - prepares available XML validators.<br/>
  * Basic configuration of every XML validator is parsed from 'validators.xml'
@@ -104,6 +104,8 @@ public class XmlValidatorsProvider extends DefaultHandler {
 	 */
 	public static final String A_SYSTEM_ID = "systemId";
 
+	public static final String A_SCHEMA = "rng";
+
 	/**
 	 * Informs provider that it has to use default EAD DTD reference (contained
 	 * in .jar file most likely)
@@ -141,6 +143,7 @@ public class XmlValidatorsProvider extends DefaultHandler {
 	@Override
 	public void startElement(String uri, String localName, String name,
 			Attributes attributes) throws SAXException {
+		logger.debug("now doing validation");
 		try {
 			if (localName.equals(T_VALIDATOR)) {
 				cDataType = new DataType(attributes.getValue(A_FORMAT),
@@ -168,6 +171,11 @@ public class XmlValidatorsProvider extends DefaultHandler {
 					defaultUrl = generateAliasURL(TEI_URL_SUFFIX);
 					XmlValidator val = new SchemaValidator(schemaUrl,
 							defaultUrl);
+					xmlValidators.put(cDataType, val);
+				} else if (localName.equals(A_SCHEMA)) {
+					logger.debug("using rng schema " + localName);
+					String schemaUrl = attributes.getValue(A_URL);
+					XmlValidator val = new RNGValidator(schemaUrl);
 					xmlValidators.put(cDataType, val);
 				}
 			}

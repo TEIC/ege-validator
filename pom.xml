@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.psnc.dl.ege.validator</groupId>
   <artifactId>ege-validator</artifactId>
-  <version>0.4.1</version>
+  <version>0.4.2</version>
   <name>EGE Validator</name>
   <properties>
 
@@ -159,6 +159,12 @@
       <artifactId>ege-framework</artifactId>
       <version>0.5.1</version>
       <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.thaiopensource/jing -->
+    <dependency>
+      <groupId>com.thaiopensource</groupId>
+      <artifactId>jing</artifactId>
+      <version>20091111</version>
     </dependency>
   </dependencies>
    <repositories>
