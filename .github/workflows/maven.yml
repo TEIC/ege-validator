@@ -22,7 +22,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: maven-settings
-      uses: s4u/maven-settings-action@v2.7.0
+      uses: s4u/maven-settings-action@v3.1.0
       with:
         servers: '[{"id": "edirom", "username": "vifebot", "password": "${GITHUB_TOKEN}"},{"id": "teic", "username": "vifebot", "password": "${GITHUB_TOKEN}"}]'
     - name: Build with Maven
